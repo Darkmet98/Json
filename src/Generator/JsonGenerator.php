@@ -32,9 +32,6 @@ final class JsonGenerator extends Generator
         $messages = [];
 
         foreach ($translations as $translation) {
-            if (!$translation->getTranslation() || $translation->isDisabled()) {
-                continue;
-            }
 
             $context = $translation->getContext() ?: '';
             $original = $translation->getOriginal();
